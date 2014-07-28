@@ -30,7 +30,7 @@ public interface CacheManager<K, V> {
     int cacheSize();
 
     /**
-     * Method must be called inrder to stop all the
+     * Method must be called in order to stop all the
      * activities of CacheManager at the end
      */
     void shutdown();

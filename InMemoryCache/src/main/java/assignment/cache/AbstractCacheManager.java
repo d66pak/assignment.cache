@@ -81,6 +81,13 @@ public abstract class AbstractCacheManager<K, V> implements CacheManager<K,V> {
     public void shutdown() {
 
         mScheduler.shutdown();
+        try {
+            if (!mScheduler.awaitTermination(60, TimeUnit.SECONDS)) {
+                mScheduler.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
