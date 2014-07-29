@@ -50,6 +50,7 @@ BUILD
 
 + Apache Maven is used as a project management/build tool
 + Use 'mvn compile test' command to compile and run the tests
++ Build and tested with JDK 1.6, 1.7 on Mac OS X
 
 ASSUMPTIONS
 ===========
@@ -60,3 +61,4 @@ ASSUMPTIONS
 + The keys are widely distributed across the key space
 + Each item may or may not be accessed during the TTL
 + Each item might be accessed multiple times during the TTL
+
